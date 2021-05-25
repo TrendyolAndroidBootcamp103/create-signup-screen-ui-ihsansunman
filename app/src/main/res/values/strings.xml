@@ -2,8 +2,15 @@
     <string name="app_name">Succulent Shop</string>
     <string name="email_or_username">Email or Username</string>
     <string name="password">Password</string>
-    <string name="log_in">Log in</string>
+    <string name="log_in">Log In</string>
     <string name="create_an_account">Create an account</string>
     <string name="this_field_is_required">This field is required.</string>
     <string name="identifier_is_too_short">Identifier is too short.</string>
+    <string name="email">E-mail</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="sign_up">Sıgn Up</string>
+    <string name="username">Username</string>
+    <string name="enter_an_email_address">Enter an e-mail address</string>
+    <string name="username_is_too_short">Username is too short</string>
+    <string name="password_is_too_short">Password is too short</string>
 </resources>

@@ -1,6 +1,8 @@
 package school.cactus.succulentshop
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
 import school.cactus.succulentshop.databinding.ActivityLoginBinding
@@ -23,7 +25,28 @@ class LoginActivity : AppCompatActivity() {
                 passwordInputLayout.validate()
                 identifierInputLayout.validate()
             }
+            createAccountButton.setOnClickListener {
+                navigateToSignupActivity()
+            }
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == REQUEST_SIGNUP_ACTIVITY) {
+
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+    private fun navigateToSignupActivity() {
+        val intent = Intent(this, SignupActivity::class.java)
+        intent.putExtra("isLoggedIn", true)
+        startActivityForResult(intent, REQUEST_SIGNUP_ACTIVITY)
+    }
+
+    companion object {
+        const val REQUEST_SIGNUP_ACTIVITY = 1001
     }
 
     private fun TextInputLayout.validate() {
